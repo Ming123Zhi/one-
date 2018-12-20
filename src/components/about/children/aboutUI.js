@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import '../css/aboutus.css'
+import '../style/aboutus.css'
 export default class AbouUI extends Component {
     render() {
         return (

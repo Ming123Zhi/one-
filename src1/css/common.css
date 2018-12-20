@@ -1,0 +1,38 @@
+#box{
+    width: 100%;
+    height: 13.34rem;
+    position: relative;
+    border:1px solid #bbb;
+}
+
+.nav{
+    width:3.76rem;
+    height:100% ;
+    z-index:1001;
+    position: absolute;
+    top:0;
+    right: 0; 
+    background: #fff;
+    box-shadow: 5px, 0, 5px,rgba(0, 0, 0, .15) 
+}
+.nav>ul{
+    width: 100%;
+    height:100%;
+    padding-top: 0.6rem
+}
+.nav>ul>li{  
+    width:3.12rem;
+    height: 0.6rem;
+    padding: 0.22rem 0.32rem;
+  
+}
+.nav>ul>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 0.6rem;
+    color: #38c;
+    font-weight: 700;
+    font-size: 0.32rem;
+}
