@@ -2,9 +2,10 @@ import {createStore,combineReducers,applyMiddleware} from 'redux';
 import reduxPromiseMiddleware from "redux-promise-middleware";
 
 import read from './reducers/reducer';
-
+import one from './reducers/onereducer'
 const reducers = combineReducers({
-    read
+    read,
+    one
 })
 
 const store = createStore(reducers,applyMiddleware(reduxPromiseMiddleware()));

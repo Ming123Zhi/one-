@@ -15,7 +15,7 @@ import store from "./store";
 
 import Bscroll from 'better-scroll';
 
-
+// json-server --routes -route.json -ajax.json -p 5000
 class App extends Component {
   constructor () {
     super ();

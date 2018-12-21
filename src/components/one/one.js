@@ -1,45 +1,47 @@
-import React,{Component} from "react"
+import React,{Component,Fragment} from "react"
 import './style/one.css'
 import {Link} from 'react-router-dom'
-//import {get_one} from '../../action/actionCreator'
+import {one_action,one_detail} from '../../action/actionCreator'
 import {connect} from 'react-redux'
 
 class One extends Component{
 
     render(){
-        let {itemList} = this.props
+        let {oneDate} = this.props
         return(
-            <div>
-                {/*
-                    itemList.map((item,index)=>{
-                        return  <Link className="item-text" to="/details" key={index}>
-                                    <p>{item.date}</p>
-                                    <p>{item.title}</p>
-                                    <a href="#">
-                                        <img src={item.img_url}/>
-                                    </a>
-                                    <p>{item.picture_author}</p>
-                                    <p>{item.content}</p>
-                                    <p>{item.text_authors}</p>
-                                </Link>
-                        //  return <Link to="/details" key={index}><div>{item}</div></Link>
+            <Fragment>
+                {
+                    oneDate.map((item,index)=>{
+                        return  <div className="item-box" key={index} onClick={this.props.handleClick.bind(this,index)}> 
+                                    <p className="item-date">{item.date}</p>
+                                    <p className="item-title">{item.title}</p>
+                                    <div className="item-img">
+                                        <img src={item.img_url} alt="插画"/>
+                                    </div>
+                                    <p className="item-pic">{item.picture_author}</p>
+                                    <p className="item-con">{item.content}</p>
+                                    <p className="item-text">{item.text_authors}</p>
+                                </div>
                     })
-                */}
-            </div>
+                }
+            </Fragment>
         )
        
     }
-    // componentDidMount(){
-    //     this.props.getData()
-    // }
+    componentDidMount(){
+        this.props.getData()
+    }
     
 }
 const mapStateToProps = (state)=>({
-    //itemList:state.reducer.itemList
+    oneDate:state.one.oneDate
  })
  const mapDispatchToProps =(dispatch)=>({
-   // getData(){
-   //      dispatch(get_one())
-   //  }
+   getData(){
+        dispatch(one_action())
+    },
+    handleClick(index){
+        dispatch(one_detail())
+    }
  })
  export default connect(mapStateToProps,mapDispatchToProps)(One)
