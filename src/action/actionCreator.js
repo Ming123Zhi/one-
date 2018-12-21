@@ -1,5 +1,5 @@
 import {fetch} from "whatwg-fetch";
-
+//阅读
 export const read_action = ()=>({
     type:"READ_DATE",
     payload:new Promise(resolve=>{
@@ -47,6 +47,19 @@ export const one_detail = (id)=>({
         .then((data)=>{
             data.id = id;
            resolve(data)
+        })
+    })
+})
+//音乐
+export const music_action = () => ({
+    type: "MUSIC_DATE",
+    payload: new Promise(resolve=>{
+        let url = "/api/music";
+        fetch(url)
+        .then(res=>res.json())
+        .then((data)=>{
+            resolve(data)
+            console.log(data)
         })
     })
 })
