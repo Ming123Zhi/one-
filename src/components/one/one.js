@@ -1,6 +1,5 @@
 import React,{Component,Fragment} from "react"
 import './style/one.css'
-import {Link} from 'react-router-dom'
 import {one_action,one_detail} from '../../action/actionCreator'
 import {connect} from 'react-redux'
 

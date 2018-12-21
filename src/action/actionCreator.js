@@ -13,6 +13,18 @@ export const read_action = ()=>({
     })
 })
 
+export const movie_action = ()=>({
+    type:"FILM_ACTION",
+    payload:new Promise(resolve=>{
+     let url = "/api/movie"
+     fetch(url)
+     .then(res=>res.json())
+     .then((data)=>{
+        resolve(data);
+     })
+ })
+ })
+
 export const one_action = ()=>({
     type:"ONE_DATE",
     payload:new Promise(resolve=>{
@@ -27,12 +39,13 @@ export const one_action = ()=>({
 
 export const one_detail = (id)=>({
     type:"ONE_DETAIL",
-    value:id,
+
     payload:new Promise(resolve=>{
         let url = "/api/one";
         fetch(url)
         .then(res=>res.json())
         .then((data)=>{
+            data.id = id;
            resolve(data)
         })
     })

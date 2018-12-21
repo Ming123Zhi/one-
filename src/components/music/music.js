@@ -5,6 +5,7 @@ class Music extends Component{
         return(
             <div className="music">
                music
+               <p>this is git two test</p>
             </div>
         )
     }
