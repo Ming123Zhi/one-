@@ -12,9 +12,9 @@ class One extends Component{
             <Fragment>
                 {
                     oneDate.map((item,index)=>{
-                        return  <div className="item-box" key={index} onClick={this.props.handleClick.bind(this,index)}> 
+                        return  <div className="item-box" key={index} onClick={this.props.handleClick.bind(this,item.id)}> 
                                     <p className="item-date">{item.date}</p>
-                                    <p className="item-title">{item.title}</p>
+                                    <p className="item-title">VOL.{item.id}</p>
                                     <div className="item-img">
                                         <img src={item.img_url} alt="插画"/>
                                     </div>
@@ -40,8 +40,9 @@ const mapStateToProps = (state)=>({
    getData(){
         dispatch(one_action())
     },
-    handleClick(index){
-        dispatch(one_detail(index))
+    handleClick(id){
+        dispatch(one_detail(id))
+        this.props.history.push("/details")
     }
  })
  export default connect(mapStateToProps,mapDispatchToProps)(One)

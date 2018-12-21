@@ -21,12 +21,19 @@ export const one_action = ()=>({
         .then(res=>res.json())
         .then((data)=>{
            resolve(data)
-           console.log(data) 
         })
     })
 })
 
-export const one_detail = (index)=>({
+export const one_detail = (id)=>({
     type:"ONE_DETAIL",
-    value:index
+    value:id,
+    payload:new Promise(resolve=>{
+        let url = "/api/one";
+        fetch(url)
+        .then(res=>res.json())
+        .then((data)=>{
+           resolve(data)
+        })
+    })
 })

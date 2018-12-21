@@ -1,6 +1,5 @@
 const defaultState = {
-    readDate: [],
-    obj:{}
+    readDate: []
 }
 
 export default (state=defaultState,action) => {
@@ -9,12 +8,6 @@ export default (state=defaultState,action) => {
             let readState = JSON.parse(JSON.stringify(state));
             readState.readDate = action.payload;
             return readState;
-        case "ONE_DETAIL":
-            let oneDetail =JSON.parse(JSON.stringify(state));
-                    
-            
-
-            return oneDetail ; 
     }
     return state;
 }
