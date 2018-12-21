@@ -6,6 +6,7 @@ class Apps extends Component{
         return(
             <div className="apps">
                apps
+               测试音乐上传
             </div>
         )
     }
