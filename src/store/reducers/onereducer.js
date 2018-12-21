@@ -9,11 +9,7 @@ export default (state=defaultState,action) => {
             let oneState = JSON.parse(JSON.stringify(state));
             oneState.oneDate = action.payload;
             return oneState;
-        case "ONE_DETAIL":
-            let oneDetail =JSON.parse(JSON.stringify(state));
-          
-           
-            return oneDetail  
+      
     }
     return state;
 }

@@ -41,7 +41,7 @@ const mapStateToProps = (state)=>({
         dispatch(one_action())
     },
     handleClick(index){
-        dispatch(one_detail())
+        dispatch(one_detail(index))
     }
  })
  export default connect(mapStateToProps,mapDispatchToProps)(One)
