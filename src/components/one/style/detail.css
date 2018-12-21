@@ -1,0 +1,50 @@
+.picture{
+    width: 100%;
+    height: 5rem;
+}
+.picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.infor{
+    width: 6.7rem;
+    height: 0.64rem;
+    margin: .2rem .4rem .4rem;
+    line-height: 0.64rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .26rem;
+    color: black;
+}
+.day{
+    width:100%;
+    height: .96rem;
+    text-align: center;
+    color: black;
+    line-height: .96rem;
+    font-size: 48px;
+}
+.year{
+    width:100%;
+    height: .64rem;
+    color: black;
+    line-height: .64rem;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: .2rem;
+}
+.separate-line{
+    width: 30%;
+    height: 1px;
+    background: #eee;
+    margin: .4rem auto;   
+}
+.content{
+    width: 6.7rem;
+    padding:0 .4rem;
+    font-size: 16px;
+    margin:.28rem 0 .4rem;
+    line-height: .52rem;
+    color:black;
+}
