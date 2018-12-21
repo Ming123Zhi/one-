@@ -2,27 +2,16 @@ import React,{Component,Fragment} from "react"
 import './style/one.css'
 import {one_action,one_detail} from '../../action/actionCreator'
 import {connect} from 'react-redux'
-
+import OneUI from './children/oneUI'
 class One extends Component{
 
     render(){
-        let {oneDate} = this.props
+        let {oneDate,handleClick} = this.props
         return(
             <Fragment>
-                {
-                    oneDate.map((item,index)=>{
-                        return  <div className="item-box" key={index} onClick={this.props.handleClick.bind(this,item.id)}> 
-                                    <p className="item-date">{item.date}</p>
-                                    <p className="item-title">VOL.{item.id}</p>
-                                    <div className="item-img">
-                                        <img src={item.img_url} alt="插画"/>
-                                    </div>
-                                    <p className="item-pic">{item.picture_author}</p>
-                                    <p className="item-con">{item.content}</p>
-                                    <p className="item-text">{item.text_authors}</p>
-                                </div>
-                    })
-                }
+                <div className="section">
+                    <OneUI oneDate = {oneDate} handleClick={handleClick.bind(this)}/>
+                </div>               
             </Fragment>
         )
        
