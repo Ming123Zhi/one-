@@ -1,14 +1,16 @@
 import React,{Component,Fragment} from 'react';
+import {Link} from 'react-router-dom';
 
 export default class MusicUI extends Component {
     render () {
-        let {musics} = this.props;
+        let {musics,handleClickid} = this.props;
         return (
             <Fragment>
              
                 {
                     musics.map((item,index)=>{
-                        return <div className="musicCon" key={index}>
+                        return  <Link to="/music/details">
+                                <div className="musicCon" key={index} onClick={handleClickid.bind(this,index)}>
                                     <p className="musicCon-tag">- 音乐 -</p>
                                     <h3 className="musicCon-title">{item.title}</h3>
                                     <p className="musicCon-author">文／{item.user_name}</p>
@@ -24,6 +26,7 @@ export default class MusicUI extends Component {
                                     <p className="musicCon-text-short">{item.forward}。</p>
                                     <p className="music-data">{item.date} </p>
                                 </div>
+                                </Link>
                     })
                 }
             </Fragment>

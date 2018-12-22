@@ -13,6 +13,7 @@ import './css/common.css'
 import { Provider } from "react-redux";
 import store from "./store";
 
+import MusicDetails from './components/music/children/musicdetails '
 import Bscroll from 'better-scroll';
 
 // json-server --routes -route.json -ajax.json -p 5000
@@ -39,11 +40,14 @@ class App extends Component {
               <Switch>
                   <Route path="/one" component={One} />
                   <Route path="/article" component={Article} />
-                  <Route path="/music" component={Music} />
+                  <Route path="/music" component={Music} exact/>
                   <Route path="/movie" component={Movie} />
                   <Route path="/apps" component={Apps} />
                   <Route path="/aboutus" component={AboutUs} />
                   <Route path="/details" component={Details} />
+
+                  <Route path="/music/details" component={MusicDetails} />
+
                   <Redirect path="/" to="/one"/>
               </Switch>
             </div>
