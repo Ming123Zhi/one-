@@ -8,7 +8,6 @@ export const read_action = ()=>({
         .then(res=>res.json())
         .then((data)=>{
            resolve(data)
-           console.log(data) 
         })
     })
 })
@@ -59,7 +58,21 @@ export const music_action = () => ({
         .then(res=>res.json())
         .then((data)=>{
             resolve(data)
-            console.log(data)
+        })
+    })
+})
+
+//音乐详情
+export const musicDetails_action = (id) => ({
+    
+    type: "MUSICDETAILS_DATE",
+    payload: new Promise(reslove=>{
+        let url = "/api/music";
+        fetch(url)
+        .then(res=>res.json())
+        .then((data)=>{
+            data.id = id
+            reslove(data)
         })
     })
 })

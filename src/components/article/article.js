@@ -19,7 +19,7 @@ class Article extends Component{
     }
     //点击进入详情页
     handleClickReadCon (read_id) {
-        // console.log(read_id);
+         console.log(read_id);
         //location.href="http://m.wufazhuce.com/article/"+read_id
     }
 }

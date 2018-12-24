@@ -1,4 +1,10 @@
 
+
+.musicCon{
+    background:#fff;
+    border-bottom:8px solid #eee;
+}
+
 .musicCon-tag{
     height:.5rem;
     margin:0 20px;
@@ -61,4 +67,100 @@
     margin:0 20px;
     padding:20px 0 30px 0;
     font-size:16px;
+}
+
+
+/* 音乐详情样式 */
+.mDetailsCon-img {
+    width:100%;
+    height:7.5rem;
+    position:relative;
+    margin-top:-1rem;
+    margin-bottom:20px;
+}
+.mDetailsCon-imgb{
+    position: absolute;
+    left: -186px;
+    top: -134px;
+    width: 9.8rem;
+    height: 9.8rem;
+    border-radius: 245px 245px 245px 0px;
+    box-shadow: 0 0 20px 5px rgba(230,230,230,0.6);
+}
+.mDetailsCon-imgwarp{
+    position: absolute;
+    left: -168px;
+    top: -116px;
+    width:9.08rem;
+    height:9.08rem;
+    border-radius: 227px 227px 227px 226px;
+    box-shadow: 0 0 20px 5px rgba(230,230,230,0.6);
+    overflow: hidden;
+}
+.mDetailsCon-imgwarp img {
+    width:100%;
+    
+}
+.mDetailsCon-play{
+    position: absolute;
+    left:.46rem;
+    top:1.5rem;
+    width:1.44rem;
+    height:1.44rem;
+
+}
+.mDetailsCon-play img{
+    width:100%;
+}
+.mDetailsCon-logo{
+    position: absolute;
+    top:1.8rem;
+    right:1.9rem;
+    width:.8rem;
+    height:.8rem;
+}
+.mDetailsCon-logo img{
+    width:100%;
+}
+.text-music-info {
+    text-align: center;
+    margin-top: .64rem;
+}
+.text-music-info p{
+    line-height:.4rem;
+}
+.mDetailsCon .text-title{
+    margin:30px 20px 0;
+    text-align: center;
+    line-height:.72rem;
+    font-size:28px;
+    color:#000;
+    font-weight:900;
+}
+.mDetailsCon .text-simple-author{
+    margin:40px 0 20px 0;
+    line-height:32px;
+    text-align: center;
+}
+
+    /* 文字内容 */
+.mDetailsCon .text-content{
+    margin-top:14px;
+    padding:0 20px;
+}
+.mDetailsCon .text-content p:nth-child(1){
+    font-size:18px;
+    line-height: 30px;
+}
+.mDetailsCon .text-content .textifo{
+    line-height:30px;
+    font-size:14px;
+    text-align: center;
+    margin-bottom:20px;
+}
+.one-gif-box {
+    margin-bottom:15px;
+}
+.one-gif-box img{
+    width:100%;
 }

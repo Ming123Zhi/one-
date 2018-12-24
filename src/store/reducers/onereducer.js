@@ -14,7 +14,7 @@ export default (state=defaultState,action) => {
             let oneDetail =JSON.parse(JSON.stringify(state));
             for(var i=0;i<action.payload.length;i++){
                 if(action.payload[i].id == action.payload.id){
-                    console.log(action.payload[i].id)
+                    
                     oneDetail.itemDetail = action.payload[i]
                     break;
                 } 
